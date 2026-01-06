@@ -1,0 +1,66 @@
+/* body{
+  background: radial-gradient(circle at top, #075464, #020617);
+  font-family: 'Poppins', sans-serif;
+} */
+
+.pill-wrapper{
+  max-width: 450px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pill-btn{
+    width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: linear-gradient(145deg,#ffffff,#f1f1f1);
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.25),
+    inset 0 1px 0 rgba(255,255,255,.8);
+  transition: all .3s ease;
+}
+
+.pill-btn span{
+  flex: 1;
+  text-align: left;
+}
+
+.pill-btn img{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.pill-btn i{
+  font-style: normal;
+  font-size: 18px;
+  opacity: .6;
+}
+
+.pill-btn:hover{
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+}
+
+/* Solid CTA */
+.pill-solid{
+  justify-content: center;
+  background: linear-gradient(135deg,#7c3aed,#ec4899);
+  color: #fff;
+  font-weight: 600;
+}
+.pill-solid:hover{
+  box-shadow:
+    0 15px 30px rgba(124,58,237,.6),
+    0 5px 15px rgba(236,72,153,.6);
+}

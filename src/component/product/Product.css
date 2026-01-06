@@ -1,0 +1,30 @@
+.contener{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 10px;
+    /* background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ciUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&w=1000&q=80") no-repeat center center/cover; */
+}
+
+
+
+.product-container {
+    
+  
+  border-radius: 24px;
+  cursor: pointer;
+
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.12);
+
+  display: flex;
+  flex-direction: column;
+  
+ 
+    align-items: center;
+
+  box-shadow:
+    0 25px 45px rgba(0,0,0,0.6),
+    inset 0 0 20px rgba(0,255,255,0.2);
+}
