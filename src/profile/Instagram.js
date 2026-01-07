@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import "./instagram.css";
 
-export default function App() {
+export default function Instagram() {
   const [followers, setFollowers] = useState(0);
   const [posts, setPosts] = useState(0);
   const [following, setFollowing] = useState(0);
