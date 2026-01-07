@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  perspective: 1200px;
+}
+
+.ig-card {
+  width: 360px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+}
+
+/* Top */
+.top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dp {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #ff2f92;
+}
+
+.stats {
+  display: flex;
+  gap: 18px;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Bio */
+.bio {
+  margin-top: 15px;
+}
+
+.bio h2 {
+  font-size: 18px;
+}
+
+.bio p {
+  font-size: 13px;
+  opacity: 0.85;
+  margin: 8px 0;
+}
+
+.follow {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg,#ff416c,#ff4b2b);
+  color: white;
+}
+
+/* Highlights */
+.highlights {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.highlights div {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 6px;
+}
+
+.post {
+  height: 100px;
+  background: linear-gradient(135deg,#333,#111);
+  border-radius: 8px;
+}

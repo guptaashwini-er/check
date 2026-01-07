@@ -1,14 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
-import NavBar from './component/NavBar';
-import ProfileMenu from './component/Profile';
 import Hero from './component/Hero';
+import Instagram from './profile/Instagram';
 
 function App() {
   return (
     <div className="">
       
       <Hero/>
+      <Instagram/>
     </div>
   );
 }
