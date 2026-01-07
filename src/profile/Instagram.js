@@ -1,77 +1,63 @@
-import { useRef } from "react";
-import "./instagram.css";
+import { useEffect, useState } from "react";
 
-export default function Instagram() {
-  const cardRef = useRef(null);
+export default function App() {
+  const [followers, setFollowers] = useState(0);
+  const [posts, setPosts] = useState(0);
+  const [following, setFollowing] = useState(0);
 
-  const tilt = (e) => {
-    const card = cardRef.current;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+  // Load saved data
+  useEffect(() => {
+    setFollowers(Number(localStorage.getItem("followers")) || 10800);
+    setPosts(Number(localStorage.getItem("posts")) || 120);
+    setFollowing(Number(localStorage.getItem("following")) || 50);
+  }, []);
 
-    const rotateX = ((y / rect.height) - 0.5) * 12;
-    const rotateY = ((x / rect.width) - 0.5) * -12;
-
-    card.style.transform = `
-      rotateX(${rotateX}deg)
-      rotateY(${rotateY}deg)
-    `;
-  };
-
-  const reset = () => {
-    cardRef.current.style.transform = "rotateX(0) rotateY(0)";
-  };
+  // Save data whenever it changes
+  useEffect(() => {
+    localStorage.setItem("followers", followers);
+    localStorage.setItem("posts", posts);
+    localStorage.setItem("following", following);
+  }, [followers, posts, following]);
 
   return (
-    <div className="page">
-      <div
-        className="ig-card"
-        ref={cardRef}
-        onMouseMove={tilt}
-        onMouseLeave={reset}
-      >
-        {/* Top section */}
-        <div className="top">
-          <img
-            src="https://i.imgur.com/8Km9tLL.jpg"
-            alt=""
-            className="dp"
-          />
+    <div className="card">
+      <h2>@yourusername</h2>
 
-          <div className="stats">
-            <div><b>120</b><span>Posts</span></div>
-            <div><b>10.8K</b><span>Followers</span></div>
-            <div><b>50</b><span>Following</span></div>
-          </div>
+      <div className="stats">
+        <div>
+          <span>{followers}</span>
+          <small>Followers</small>
         </div>
-
-        {/* Bio */}
-        <div className="bio">
-          <h2>yourusername</h2>
-          <p>
-            Tech Creator 🚀 <br />
-            Reels | Web | AI <br />
-            🇮🇳 India
-          </p>
-
-          <button className="follow">Follow</button>
+        <div>
+          <span>{posts}</span>
+          <small>Posts</small>
         </div>
-
-        {/* Highlights */}
-        <div className="highlights">
-          <div>🔥</div>
-          <div>🎥</div>
-          <div>💻</div>
-          <div>🤖</div>
+        <div>
+          <span>{following}</span>
+          <small>Following</small>
         </div>
+      </div>
 
-        {/* Grid Preview */}
-        <div className="grid">
-          {Array.from({ length: 9 }).map((_, i) => (
-            <div key={i} className="post"></div>
-          ))}
-        </div>
+      {/* Admin Panel */}
+      <div className="admin">
+        <input
+          type="number"
+          value={followers}
+          onChange={(e) => setFollowers(Number(e.target.value))}
+          placeholder="Followers"
+        />
+        <input
+          type="number"
+          value={posts}
+          onChange={(e) => setPosts(Number(e.target.value))}
+          placeholder="Posts"
+        />
+        <input
+          type="number"
+          value={following}
+          onChange={(e) => setFollowing(Number(e.target.value))}
+          placeholder="Following"
+        />
       </div>
     </div>
   );

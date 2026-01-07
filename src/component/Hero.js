@@ -1,3 +1,4 @@
+import Instagram from "../profile/Instagram";
 import Navbar from "./NavBar";
 import Product from "./product/ProductBUtton";
 import ProfileMenu from "./Profile";
@@ -10,6 +11,7 @@ function Hero() {
 
         <ProfileMenu/>
         <Product/>
+        <Instagram/>
         
         
         </>
