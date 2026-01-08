@@ -12,7 +12,7 @@ function Rander() {
       <Routes>
         <Route path='/' element={<Hero/>}/>  
         <Route path='/about' element={<h1>About Page</h1>}/>
-        <Route path='/#/profile' element={<Instagram/>}/>
+        <Route path='/profile' element={<Instagram/>}/>
       </Routes>
     </HashRouter>
   );
