@@ -8,7 +8,10 @@ export default function Navbar() {
   return (
     <div>
     <nav className="navbar">
-      <div className="logo">Tech Ashwin</div>
+      <div style={{display:"flex"}}><img className="logoimg" src="\profile.jpg" alt="Logo"/>
+       <div className="logo">Tech Ashwin</div>
+      </div>
+     
 
       <ul className="nav-links">
         <li><a href="/">Home</a></li>

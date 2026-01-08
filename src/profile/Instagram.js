@@ -14,7 +14,7 @@ export default function Instagram() {
         clearInterval(interval);
       }
       setFollowers(count);
-    }, 20);
+    }, 200);
 
     return () => clearInterval(interval);
   }, []);
@@ -49,9 +49,14 @@ export default function Instagram() {
         <p>🎬 Video Editing • AI Tools</p>
         <p>📱 Reels = Growth Hacks</p>
         <p>🎁 Free Tools & Resources ↓</p>
-        <a href="https://check-9wf7.onrender.com" target="_blank" alt="link" rel="noreferrer">
+        <a href="https://check-9wf7.onrender.com" target="_blank" rel="noreferrer">
           check-9wf7.onrender.com
         </a>
+      </div>
+      <div className="follow">
+        <a href="https://www.instagram.com/tech__ashwin?igsh=MXZ3aWJzdzdhbWVibA%3D%3D" className="follow-btn" target="_blank" rel="noreferrer">Follow</a>
+       
+        <button className="message-btn">Message</button>
       </div>
     </div>
   );

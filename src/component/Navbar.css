@@ -20,8 +20,9 @@ body {
   border-radius: 20px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 50px;
 
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.7),
@@ -31,6 +32,14 @@ body {
 }
 
 /* Logo */
+.logoimg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+  margin-right: 10px;
+}
 .logo {
   font-size: 25px;
   font-weight: 700;
