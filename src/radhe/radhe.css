@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button */
+.btn {
+  padding: 14px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: #ff6f00;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 10px;
+  animation: float 2s infinite ease-in-out;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Count */
+.count {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Box */
+.box {
+  width: 100%;
+  max-width: 320px;
+  height: 250px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  overscroll-behavior-inline: auto;
+  overflow: scroll;
+  scrollbar-3dlight-color: aqua;
+   
+    
+    
+
+}
+
+.follow-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    cursor: pointer;
+}
+
+.cros-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Text */
+.radhe {
+  background: #fff3e0;
+  margin: 6px 0;
+  padding: 8px;
+  border-radius: 6px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Image */
+.radhe-img {
+  width: 120px;
+  position: absolute;
+  top: 12%;
+  animation: popFade 1.2s ease forwards;
+  pointer-events: none;
+}
+
+/* 🌸 Flower */
+.flower {
+  position: absolute;
+  top: -40px;
+  pointer-events: none;
+  animation-name: fallSwing;
+  animation-timing-function: linear;
+}
+
+.song-box {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 320px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.song-btn {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 6px;
+  background: #ffe0b2;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.song-btn.playing {
+  background: #ff9800;
+  color: white;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes popFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(30px);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-30px);
+  }
+}
+
+@keyframes fallSwing {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg) translateX(20px);
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg) translateX(-20px);
+    opacity: 0;
+  }
+}
