@@ -14,8 +14,11 @@ function Rander() {
         <Route path='/' element={<Hero/>}/>  
         <Route path='/about' element={<h1>About Page</h1>}/>
         <Route path='/profile' element={<Instagram/>}/>
+<<<<<<< HEAD
         <Route path='/radhe' element={<Radhe/>}/>
         <Route path='*' element={<h1>404 Not Found</h1>}/>
+=======
+>>>>>>> a66a656f62190f550e0870226e59fea0baee9259
       </Routes>
     </HashRouter>
   );
